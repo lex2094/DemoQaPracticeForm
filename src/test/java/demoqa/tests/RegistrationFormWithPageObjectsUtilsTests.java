@@ -1,12 +1,14 @@
 package demoqa.tests;
 
 import demoqa.pages.RegistrationFormPage;
+import demoqa.pages.components.CalendarComponent;
 import demoqa.pages.components.ResultsModal;
 import org.junit.jupiter.api.Test;
 
 public class RegistrationFormWithPageObjectsUtilsTests extends TestBase {
     RegistrationFormPage registrationFormPage = new RegistrationFormPage();
     ResultsModal resultsModal = new ResultsModal();
+    CalendarComponent calendarComponent = new CalendarComponent();
 
 
     @Test
@@ -17,7 +19,7 @@ public class RegistrationFormWithPageObjectsUtilsTests extends TestBase {
                 .setEmail(email)
                 .setGender("Other")
                 .setNumber(phone)
-                .setBirthDate(generateDay(), generateMonth(), generateYear())
+                //.setBirthDate(day,month,year)
                 .setSubjectInput()
                 .setHobbiesWrapper()
                 .uploadPicture()
@@ -26,11 +28,10 @@ public class RegistrationFormWithPageObjectsUtilsTests extends TestBase {
                 .setCity();
         registrationFormPage.clickSubmit();
         resultsModal.checkVisible();
-        registrationFormPage.checkResultsTableVisible()
-                    .checkResult("Student Name", firstName)
-                    .checkResult("Student Email", email)
-                    .checkResult("Date of Birth", generateDay() + " " + generateMonth() + "," + generateYear());
+        //registrationFormPage.checkResultsTableVisible()
+                    //.checkResult("Student Name", firstName)
+                    //.checkResult("Student Email", email)
+                    //.checkResult("Date of Birth", day + " " + month + "," + year);
         resultsModal.checkVisible();
-        System.out.println("11");
     }
 }

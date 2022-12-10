@@ -1,13 +1,12 @@
-package com.demoqa.pages;
+package demoqa.pages;
 
 import com.codeborne.selenide.SelenideElement;
-import com.demoqa.pages.components.CalendarComponent;
-import com.demoqa.pages.components.ResultsModal;
+import demoqa.pages.components.CalendarComponent;
+import demoqa.pages.components.ResultsModal;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.Selenide.$;
 
 public class RegistrationFormPage {
 

@@ -1,11 +1,8 @@
-package com.demoqa.tests;
+package demoqa.tests;
 
-import com.demoqa.pages.RegistrationFormPage;
-import com.demoqa.pages.components.ResultsModal;
+import demoqa.pages.RegistrationFormPage;
+import demoqa.pages.components.ResultsModal;
 import org.junit.jupiter.api.Test;
-
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selenide.$;
 
 public class RegistrationFormWithPageObjectsUtilsTests extends TestBase {
     RegistrationFormPage registrationFormPage = new RegistrationFormPage();
@@ -34,6 +31,6 @@ public class RegistrationFormWithPageObjectsUtilsTests extends TestBase {
                     .checkResult("Student Email", email)
                     .checkResult("Date of Birth", generateDay() + " " + generateMonth() + "," + generateYear());
         resultsModal.checkVisible();
-        System.out.println("okk");
+        System.out.println("11");
     }
 }

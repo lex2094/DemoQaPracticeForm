@@ -1,8 +1,8 @@
-package com.demoqa.tests;
+package demoqa.tests;
 
 import com.codeborne.selenide.Configuration;
-import com.demoqa.utils.RandomUtils;
 import com.github.javafaker.Faker;
+import demoqa.utils.RandomUtils;
 import org.junit.jupiter.api.BeforeAll;
 
 import java.util.Locale;

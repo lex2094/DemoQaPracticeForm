@@ -1,6 +1,7 @@
-package com.demoqa.pages.components;
+package demoqa.pages.components;
 
-import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Condition.appear;
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
@@ -19,11 +20,4 @@ public class ResultsModal {
                 .parent().shouldHave(text(value));
         return this;
     }
-// I wanted to check, that the field is empty in form
-
-/*    public ResultsModal checkEmptyResult (String key, String value){
-        $(".table-responsive table").$(byText(key))
-                .parent().shouldBe(empty);
-        return this;
-    }*/
 }
